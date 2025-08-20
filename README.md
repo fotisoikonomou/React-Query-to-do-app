@@ -1,69 +1,52 @@
-# React + TypeScript + Vite
+React Query Todo App
+This is a simple single-page application built with React and TypeScript to demonstrate the use of the React Query library for data fetching, caching, and state management.
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+The app fetches a list of todos from a public API (JSONPlaceholder) and displays them in a clean, user-friendly list.
 
-Currently, two official plugins are available:
+✨ Features
+Data Fetching: Uses React Query's useQuery hook to fetch data asynchronously.
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+Automatic Caching: Automatically caches fetched data, preventing unnecessary network requests.
 
-## Expanding the ESLint configuration
+Loading & Error States: Handles loading and error states out of the box, providing a better user experience.
 
-If you are developing a production application, we recommend updating the configuration to enable type-aware lint rules:
+TypeScript: Built with TypeScript for type safety and better developer experience.
 
-```js
-export default tseslint.config([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
+Clean Styling: Styled with plain CSS for a simple, elegant look.
 
-      // Remove tseslint.configs.recommended and replace with this
-      ...tseslint.configs.recommendedTypeChecked,
-      // Alternatively, use this for stricter rules
-      ...tseslint.configs.strictTypeChecked,
-      // Optionally, add this for stylistic rules
-      ...tseslint.configs.stylisticTypeChecked,
+🚀 Getting Started
+To get a copy of this project up and running on your local machine, follow these steps.
 
-      // Other configs...
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
-```
+Prerequisites
+You'll need Node.js and npm installed on your machine.
 
-You can also install [eslint-plugin-react-x](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-x) and [eslint-plugin-react-dom](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-dom) for React-specific lint rules:
+Installation
+Clone the repository:
 
-```js
-// eslint.config.js
-import reactX from 'eslint-plugin-react-x'
-import reactDom from 'eslint-plugin-react-dom'
+Bash
 
-export default tseslint.config([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
-      // Enable lint rules for React
-      reactX.configs['recommended-typescript'],
-      // Enable lint rules for React DOM
-      reactDom.configs.recommended,
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
-```
+git clone https://github.com/your-username/your-repo-name.git
+cd your-repo-name
+Install the dependencies:
+
+Bash
+
+npm install
+Run the application:
+
+Bash
+
+npm run dev
+The app will be available at http://localhost:5173 (or a similar address).
+
+💡 What I Learned
+This project was a great way to learn about and implement key concepts of React Query, including:
+
+Setting up the QueryClientProvider to make the client available throughout the app.
+
+Using useQuery with a queryKey and queryFn.
+
+Managing the different states of an API call (isLoading, isError, data).
+
+Configuring queries for a better user experience.
+
