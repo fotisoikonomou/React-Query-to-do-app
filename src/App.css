@@ -1,0 +1,128 @@
+#root {
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 2rem;
+  text-align: center;
+}
+
+.logo {
+  height: 6em;
+  padding: 1.5em;
+  will-change: filter;
+  transition: filter 300ms;
+}
+.logo:hover {
+  filter: drop-shadow(0 0 2em #646cffaa);
+}
+.logo.react:hover {
+  filter: drop-shadow(0 0 2em #61dafbaa);
+}
+
+@keyframes logo-spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  a:nth-of-type(2) .logo {
+    animation: logo-spin infinite 20s linear;
+  }
+}
+
+.card {
+  padding: 2em;
+}
+
+.read-the-docs {
+  color: #888;
+}
+
+/* src/App.css */
+
+/* General App container */
+.app-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  min-height: 100vh;
+  background-color: #f3f4f6;
+  padding: 2rem;
+  font-family: Arial, sans-serif;
+}
+
+.app-title {
+  font-size: 2.5rem;
+  font-weight: bold;
+  color: #1f2937;
+  margin-bottom: 2rem;
+}
+
+/* Todos component container */
+.todos-container {
+  background-color: #ffffff;
+  border-radius: 0.5rem;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  padding: 1.5rem;
+  width: 100%;
+  max-width: 32rem;
+}
+
+/* List items */
+.todo-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.todo-item {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  padding: 0.75rem 0;
+  border-bottom: 1px solid #e5e7eb;
+}
+
+.todo-item:last-child {
+  border-bottom: none;
+}
+
+/* Todo text */
+.todo-title {
+  font-size: 1.125rem;
+  color: #374151;
+  transition: color 0.2s ease-in-out;
+}
+
+.todo-title.completed {
+  text-decoration: line-through;
+  color: #6b7280;
+}
+
+/* Checkbox */
+.todo-checkbox {
+  width: 1.25rem;
+  height: 1.25rem;
+  accent-color: #2563eb;
+}
+
+/* Loading and error messages */
+.message-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 12rem;
+}
+
+.loading-text {
+  font-size: 1.125rem;
+  color: #6b7280;
+}
+
+.error-text {
+  font-size: 1.125rem;
+  color: #ef4444;
+}
